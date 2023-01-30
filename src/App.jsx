@@ -34,6 +34,9 @@ function App() {
 
     const showInput = () => { setActive(!active) }
 
+
+
+
     const editTask = (nombre, item) => {
         const tareaCopia = [...tarea];
         tareaCopia.map((tarea) => {
