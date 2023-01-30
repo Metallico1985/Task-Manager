@@ -7,7 +7,7 @@
 .mainApp {
     padding-top: 4rem;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,7 +15,13 @@
     background: linear-gradient(290deg, #100f0f 0%, #312727 50.37%, #cf4545 100%);
     font-family: "Roboto", sans-serif;
 }
-
+.mainAdd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+}
 form {
     width: 80%;
     padding-top:4rem ;
@@ -25,11 +31,15 @@ form {
     flex-direction: column;
     margin-bottom: 3rem;
 }
-
+.mainList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 input {
     padding:1rem;
     border: none;
-    
 }
 
 select {
@@ -47,7 +57,7 @@ ul {
 }
 
 li {
-    width: 20rem;
+    max-width: 80%;
     height: 3rem;
     padding: 1rem;
     border-radius: 4px;
@@ -57,7 +67,6 @@ li {
 }
 
 .liContainer {
-    width: 70%;
     display: flex;
     justify-content: center;
     margin-top: 1rem;
@@ -70,7 +79,6 @@ li {
 }
 
 .inputEdit {
-    width: 40rem;
     height: 3rem;
     border: 1px solid red;
 

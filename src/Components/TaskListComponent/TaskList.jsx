@@ -7,7 +7,7 @@ function TaskList(props) {
     const handleInput = (e) => { setInput(e.target.value) };
 
     return (
-        <div >
+        <div className='mainList'>
             <h3>Tareas</h3>
             {/* <div id="mensaje-lista-vacia">Parece que no hay nada por aquí!</div> */}
             <ul id="lista-tareas">
@@ -19,7 +19,7 @@ function TaskList(props) {
                             className='btnEdit'>Edit</button>
                     </div>
                         <div className={props.act ? 'inputActive inputContainer' : 'inputInactive inputContainer'}>
-                            < input onChange={handleInput} className="inputEdit" type="text" />
+                            < input onChange={handleInput} className="inputEdit" type="text" maxLength={20}/>
 
                             <button onClick={() => props.edit(input, item)} className='btnGuardar'>Guardar</button>
                         </div ></>
