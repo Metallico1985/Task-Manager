@@ -20,7 +20,7 @@ function TaskList(props) {
                         <button className='btnBorrar' onClick={()=>props.delete(item)}>Borrar</button>
                     </div>
                         <div className={props.act ? 'inputActive inputContainer' : 'inputInactive inputContainer'}>
-                            < input onChange={handleInput} className="inputEdit" type="text" maxLength={20}/>
+                            < input onChange={handleInput} className="inputEdit" type="text" maxLength={25}/>
 
                             <button onClick={() => props.edit(input, item)} className='btnGuardar'>Guardar</button>
                         </div ></>
