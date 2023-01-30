@@ -8,15 +8,16 @@ function TaskList(props) {
 
     return (
         <div className='mainList'>
-            <h3>Tareas</h3>
-            {/* <div id="mensaje-lista-vacia">Parece que no hay nada por aquí!</div> */}
+            <h1>Tareas</h1>
+           
             <ul id="lista-tareas">
                 {props.lista.map((item) =>
-                    <><div className='liContainer'><li onClick={() => props.delete(item)}
+                    <><div className='liContainer'><li
                         className={item.clase}
                         value={item}>{item.nombre}</li>
                         <button onClick={props.show}
                             className='btnEdit'>Edit</button>
+                        <button className='btnBorrar' onClick={()=>props.delete(item)}>Borrar</button>
                     </div>
                         <div className={props.act ? 'inputActive inputContainer' : 'inputInactive inputContainer'}>
                             < input onChange={handleInput} className="inputEdit" type="text" maxLength={20}/>

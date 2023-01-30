@@ -23,7 +23,7 @@ const handleSubmit = (e) => { e.preventDefault(); props.applyAdd(taskObj) };
 
   return (
     <div className='mainAdd'>
-        <h1>Task Manager</h1>
+        <h1>Lista de tareas</h1>
        <form onSubmit={handleSubmit}>
                 <input onChange={handleTask} maxLength={20} id="tarea" type="text" name="tarea" placeholder="Descripción de la tarea" />
                 <select onChange={handlePrio} name="prioridad" id="prioridad">
