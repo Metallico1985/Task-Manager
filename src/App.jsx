@@ -6,7 +6,7 @@ import { useState } from 'react';
 function App() {
 
     const [tarea, setTarea] = useState([]);
-    const [active, setActive] = useState(false);
+    const [active_id, setActive] = useState(null);
 
     const addTask = (nuevaTarea) => {
 
@@ -32,7 +32,7 @@ function App() {
         setTarea(newArray)
     }
 
-    const showInput = () => { setActive(!active) }
+    const showInput = (input_id) => { setActive(input_id) }
 
 
 
@@ -51,7 +51,7 @@ function App() {
   return (
     <div className='mainApp'>
         <AddComponent applyAdd={addTask}/>
-        <TaskList lista={tarea} delete={deleteTask} show={showInput} act={active} edit={editTask} />
+          <TaskList lista={tarea} delete={deleteTask} show={showInput} act={active_id} edit={editTask} />
         {console.log(tarea)}
     </div>
   )
