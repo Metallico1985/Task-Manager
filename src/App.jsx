@@ -6,7 +6,7 @@ import { useState } from 'react';
 function App() {
 
     const [tarea, setTarea] = useState([]);
-    const [active, setActive] = useState(false);
+    const [active_id, setActive] = useState(null);
 
     const addTask = (nuevaTarea) => {
 
@@ -31,12 +31,7 @@ function App() {
         const newArray = tarea.filter(task => task.id !== item.id)
         setTarea(newArray)
     }
-
-    const showInput = () => { setActive(!active) }
-
-
-
-
+       
     const editTask = (nombre, item) => {
         const tareaCopia = [...tarea];
         tareaCopia.map((tarea) => {
@@ -48,10 +43,16 @@ function App() {
         setTarea(tareaCopia);
         setActive(false);
     }
+
+    const showInput = (input_id)=> {setActive(input_id)}
+           
+    
+     
+
   return (
     <div className='mainApp'>
         <AddComponent applyAdd={addTask}/>
-        <TaskList lista={tarea} delete={deleteTask} show={showInput} act={active} edit={editTask} />
+        <TaskList lista={tarea} delete={deleteTask} show={showInput} act={active_id} edit={editTask} />
         {console.log(tarea)}
     </div>
   )
