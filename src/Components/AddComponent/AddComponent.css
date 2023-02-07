@@ -23,7 +23,7 @@
     width: 50%;
 }
 form {
-    width: 80%;
+    width: 100%;
     padding-top:4rem ;
     display: flex;
     justify-content: center;
@@ -76,6 +76,7 @@ li {
 h1{
     color: rgb(207, 204, 204);
 }
+
 .btnEdit {
    border-radius: 5px;
     width:auto;
