@@ -31,12 +31,18 @@ function App() {
         const newArray = tarea.filter(task => task.id !== item.id)
         setTarea(newArray)
     }
-       
+
     const editTask = (nombre, item) => {
         const tareaCopia = [...tarea];
         tareaCopia.map((tarea) => {
             if (tarea.id === item.id) {
-                tarea.nombre = nombre
+                if (nombre.length > 5) {
+                    tarea.nombre = nombre.toLowerCase()
+                }
+                else {
+                    alert("Ingresar una tarea de al menos 5 caracteres de largo")
+                }
+
             }
 
         })
@@ -44,18 +50,18 @@ function App() {
         setActive(false);
     }
 
-    const showInput = (input_id)=> {setActive(input_id)}
-           
-    
-     
+    const showInput = (input_id) => { setActive(input_id) }
 
-  return (
-    <div className='mainApp'>
-        <AddComponent applyAdd={addTask}/>
-        <TaskList lista={tarea} delete={deleteTask} show={showInput} act={active_id} edit={editTask} />
-        {console.log(tarea)}
-    </div>
-  )
+
+
+
+    return (
+        <div className='mainApp'>
+            <AddComponent applyAdd={addTask} />
+            <TaskList lista={tarea} delete={deleteTask} show={showInput} act={active_id} edit={editTask} />
+            {console.log(tarea)}
+        </div>
+    )
 }
 
 export default App

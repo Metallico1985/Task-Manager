@@ -9,14 +9,14 @@ function AddComponent(props) {
     const [priority, setPriority] = useState("");
 
     const taskObj = {
-        nombre: task,
+        nombre: task.toLowerCase(),
         prioridad: priority,
         clase: "",
         id: uuidv4()
     }
 
 
-const handleTask = (e) => { setTask(e.target.value.toLowerCase()) }
+const handleTask = (e) => { setTask(e.target.value) }
 const handlePrio = (e) => { setPriority(e.target.value) }
 const handleSubmit = (e) => { e.preventDefault(); props.applyAdd(taskObj); document.getElementById("tarea").focus(); document.getElementById("tarea").value=(""); setTask("") };
 
@@ -24,7 +24,7 @@ const handleSubmit = (e) => { e.preventDefault(); props.applyAdd(taskObj); docum
     <div className='mainAdd'>
         <h1>Lista de tareas</h1>
        <form onSubmit={handleSubmit}>
-                <input onChange={handleTask} required minLength={5} maxLength={20} id="tarea" type="text" name="tarea" placeholder="Descripción de la tarea" autoFocus  />
+                <input onChange={handleTask} required minLength={5} maxLength={20} id="tarea" type="text" name="tarea" placeholder="Ingrese una tarea" autoFocus  />
                 <select onChange={handlePrio} name="prioridad" id="prioridad">
                     <option disabled selected>Prioridad</option>
                     <option value="baja">Baja</option>
