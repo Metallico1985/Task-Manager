@@ -26,7 +26,7 @@ const handleSubmit = (e) => { e.preventDefault(); props.applyAdd(taskObj); docum
        <form onSubmit={handleSubmit}>
                 <input onChange={handleTask} required minLength={5} maxLength={20} id="tarea" type="text" name="tarea" placeholder="Ingrese una tarea" autoFocus  />
                 <select onChange={handlePrio} name="prioridad" id="prioridad">
-                    <option disabled selected>Prioridad</option>
+                    <option disabled selected>Seleccionar prioridad</option>
                     <option value="baja">Baja</option>
                     <option value="media">Media</option>
                     <option value="alta">Alta</option>
