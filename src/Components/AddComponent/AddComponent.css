@@ -140,3 +140,14 @@ li:hover {
     color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
 }
+@media (max-width: 1444px){
+    #liTask{
+       width: 45vw;
+       overflow: auto;
+    }
+
+    li:hover {
+        transform: none;
+        box-shadow: none
+    }
+}

@@ -15,6 +15,7 @@ function TaskList(props) {
                 {props.lista.map((item) =>
                     <><div className='liContainer'><li
                         className={item.clase}
+                        id="liTask"
                         value={item}>{item.nombre}</li>
                         <button name='btnEdit' id={item.id} onClick={()=>props.show(item.id)}
                             className='btnEdit'>Editar</button>
