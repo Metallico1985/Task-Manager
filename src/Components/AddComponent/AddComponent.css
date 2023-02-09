@@ -33,9 +33,10 @@ form {
 }
 .mainList{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
+    min-height: 50vh;
 }
 input {
     padding:1rem;
@@ -140,6 +141,10 @@ li:hover {
     color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
 }
+.footerContainer img{
+    height: 5vh;
+}
+
 @media (max-width: 1444px){
     #liTask{
        width: 45vw;

@@ -1,6 +1,7 @@
 import React from 'react'
 import AddComponent from './Components/AddComponent/AddComponent'
 import TaskList from './Components/TaskListComponent/TaskList'
+import Footer from './Components/Footer/Footer'
 import { useState } from 'react';
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
             <AddComponent applyAdd={addTask} />
             <TaskList lista={tarea} delete={deleteTask} show={showInput} act={active_id} edit={editTask} />
             {console.log(tarea)}
+            <Footer/>
         </div>
     )
 }

@@ -33,6 +33,7 @@ const handleSubmit = (e) => { e.preventDefault(); props.applyAdd(taskObj); docum
                 </select>
                 <button type="submit" id="btnAdd">Agregar!</button>
             </form>
+            
     </div>
   )
 }
